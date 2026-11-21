@@ -7,7 +7,9 @@
 A deterministic Python chess engine for make.fun's `tiny-chess-01` bounty.
 `main.py` is the complete runtime entry point and uses only Python's standard
 library. It searches a fixed node budget with iterative-deepening alpha-beta,
-capture ordering, and quiescence search.
+MVV-LVA capture and checking-move ordering, and quiescence search. Its compact
+evaluation rewards central control, penalizes exposed kings in the middlegame,
+and advances pawns more aggressively in the endgame.
 
 The engine reads the current FEN and legal root moves from `MAKEFUN_ENV_URL`,
 then sends its selected move back to the game environment. It makes no model
