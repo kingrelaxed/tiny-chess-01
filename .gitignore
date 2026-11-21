@@ -1,0 +1,6 @@
+.makefun-kit/
+.makefun/
+__pycache__/
+credentials.json
+makefun-keypair.json
+engine.py
